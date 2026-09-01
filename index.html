@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>キャラクター相性・一致度診断</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <h1>相性・一致度診断</h1>
+
+  <img src="IMG_3456.jpeg" alt="診断イメージ">
+
+  <div class="description">
+
+    <p>
+      10個の質問に答えて、<br>
+      オリジナルキャラ(メンバー)との<br>
+      相性・一致度を診断してみよう！
+    </p>
+
+    <p>
+      「自分ならどうする？」と
+      直感で選んでみてください！
+    </p>
+
+    <p>
+      全10問・4択です！<br>
+      回答が終わると診断結果が表示されます！
+    </p>
+
+  </div>
+
+
+  <!-- Q1 -->
+  <div id="question1">
+
+    <h2>Q1</h2>
+
+    <p>友達から突然「今から遊ばない？」と誘われた！</p>
+
+    <button data-score="1">え、遊ぼう(即決)</button>
+    <button data-score="0">いいけど何するの？</button>
+    <button data-score="0">急に言われても、予定が…</button>
+    <button data-score="0">え、無理</button>
+
+  </div>
+
+
+  <!-- Q2 -->
+  <div id="question2" style="display: none;">
+
+    <h2>Q2</h2>
+
+    <p>グループチャットでしょうもない画像が送られてきた！</p>
+
+    <button data-score="0">いったん笑う</button>
+    <button data-score="1">自分もしょうもない画像を送る</button>
+    <button data-score="0">画像に対してツッコミを入れる</button>
+    <button data-score="0">は？</button>
+
+  </div>
+
+
+  <!-- Q3 -->
+  <div id="question3" style="display: none;">
+
+    <h2>Q3</h2>
+
+    <p>明日提出の課題がまだ終わっていない…君はどうする？</p>
+
+    <button data-score="0">明日の朝やる</button>
+    <button data-score="0">愚痴を言いながらも進める</button>
+    <button data-score="1">いったんゲームする</button>
+    <button data-score="0">実は既に終わらせてます</button>
+
+  </div>
+
+
+  <!-- Q4 -->
+  <div id="question4" style="display: none;">
+
+    <h2>Q4</h2>
+
+    <p>夜に友達との会話が盛り上がっている！でも明日は学校…どうする？</p>
+
+    <button data-score="1">知らん！お喋り！</button>
+    <button data-score="0">すまんもう寝ます</button>
+    <button data-score="0">友達に寝るように言う</button>
+    <button data-score="0">そもそもそんな友達いない</button>
+
+  </div>
+
+
+  <!-- Q5 -->
+  <div id="question5" style="display: none;">
+
+    <h2>Q5</h2>
+
+    <p>SNSでめちゃくちゃ面白い投稿を見つけた！</p>
+
+    <button data-score="1">すぐ共有する</button>
+    <button data-score="0">とりあえず保存</button>
+    <button data-score="0">何度も見返す</button>
+    <button data-score="0">見ただけで終わり</button>
+
+  </div>
+
+
+  <!-- Q6 -->
+  <div id="question6" style="display: none;">
+
+    <h2>Q6</h2>
+
+    <p>初対面の人と2人きりになった。君ならどうする？</p>
+
+    <button data-score="0">自己紹介</button>
+    <button data-score="1">無言</button>
+    <button data-score="0">相手が話しかけてくるのを待つ</button>
+    <button data-score="0">立ち去る</button>
+
+  </div>
+
+
+  <!-- Q7 -->
+  <div id="question7" style="display: none;">
+
+    <h2>Q7</h2>
+
+    <p>友達が落ち込んでいる。君はどうする？</p>
+
+    <button data-score="0">少しでも慰めて元気出させる</button>
+    <button data-score="0">なんかあったんか？話聞こか？</button>
+    <button data-score="1">大丈夫？と聞いてそばにいる</button>
+    <button data-score="0">いつも通り接する</button>
+
+  </div>
+
+
+  <!-- Q8 -->
+  <div id="question8" style="display: none;">
+
+    <h2>Q8</h2>
+
+    <p>何もない休日…君は何をして過ごす？</p>
+
+    <button data-score="0">ぼーっとして時間潰す</button>
+    <button data-score="0">とりあえず寝る</button>
+    <button data-score="0">外に出かける</button>
+    <button data-score="1">好きなことをする</button>
+
+  </div>
+
+
+  <!-- Q9 -->
+  <div id="question9" style="display: none;">
+
+    <h2>Q9</h2>
+
+    <p>「コレ面白いから絶対見て！」と友達から動画を送られてきた。どうする？</p>
+
+    <button data-score="1">すぐ見る</button>
+    <button data-score="0">なんとなく時間あけてから見る</button>
+    <button data-score="0">見ない</button>
+    <button data-score="0">あ〜、それ知ってる！</button>
+
+  </div>
+
+
+  <!-- Q10 -->
+  <div id="question10" style="display: none;">
+
+    <h2>Q10</h2>
+
+    <p>友達と意見が合わず…ちょっとした言い争いになった。君なら？</p>
+
+    <button data-score="0">相手の意見を聞いて納得できるところを探す</button>
+    <button data-score="1">正直に自分の意見を言う</button>
+    <button data-score="0">面倒なので相手に合わせる</button>
+    <button data-score="0">その話題自体を避ける</button>
+
+  </div>
+
+
+  <!-- 点数 -->
+  <p>現在の点数：<span id="score">0</span>点</p>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
